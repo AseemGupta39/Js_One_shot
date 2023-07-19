@@ -6,29 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="name" id="name"/>
-    <button onclick="greet()">Greet</button> 
-    <div class="greet">
-
-    </div>
-    <!-- <div id="main" class="test"> -->
-        <!-- <div class="main">
-        welcome to wsctech
-    </div>
-    <div class="main">
-        chwer
-    </div> -->
+    <input type="number" name="first" id="first" step="any"/>
+    <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="second" id="second" step="any"/>
+    <br/>
+    <button onclick="cal()">Calculate</button>
+    <input type="text" name="" id="res" readonly=""/>
+    
     <script type="text/javascript">
-        // document.getElementById("main").innerHTML="helooo mere dostoooo";
+        function cal(){
+            let num1 = document.getElementById("first").value;
+            num1 = Number.parseInt(num1);
+            let op = document.getElementById('ope').value;
+            let num2 = document.getElementById('second').value;
+            num2 = Number.parseInt(num2);
+            
+            let text;
+            switch (op) {
+            case "+":
+                text = num1+num2;
+                break;
 
-        // document.getElementsByClassName("main")[0].innerHTML="BYE HELL";
-        // document.getElementsByClassName("main")[1].innerHTML="edoc der";
+            case "-":
+                text = num1 - num2;
+                break;
 
-        function greet(){
-            // alert('yes'); 
-            let name = document.getElementById('name').value;
-            document.getElementsByClassName('greet')[0].innerHTML = "hello "+name;
-            // alert(name);
+            case "*":
+            text = num1 * num2;
+            break;
+
+            case "/":
+                if(num2==0){
+                    alert('cant divide by zero')
+                    break
+                }
+                text = num1 / num2;
+                break;
+            }   
+            document.getElementById('res').value = text;
         }
         </script>
 </body>
