@@ -6,18 +6,30 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" name="name" id="name"/>
+    <button onclick="greet()">Greet</button> 
+    <div class="greet">
+
+    </div>
     <!-- <div id="main" class="test"> -->
-        <div class="main">
+        <!-- <div class="main">
         welcome to wsctech
     </div>
     <div class="main">
         chwer
-    </div>
+    </div> -->
     <script type="text/javascript">
         // document.getElementById("main").innerHTML="helooo mere dostoooo";
 
-        document.getElementsByClassName("main")[0].innerHTML="BYE HELL";
-        document.getElementsByClassName("main")[1].innerHTML="edoc der";
+        // document.getElementsByClassName("main")[0].innerHTML="BYE HELL";
+        // document.getElementsByClassName("main")[1].innerHTML="edoc der";
+
+        function greet(){
+            // alert('yes'); 
+            let name = document.getElementById('name').value;
+            document.getElementsByClassName('greet')[0].innerHTML = "hello "+name;
+            // alert(name);
+        }
         </script>
 </body>
 </html>
