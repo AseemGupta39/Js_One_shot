@@ -6,7 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" name="first" id="first" step="any"/>
+
+    <h1>Name <i id = "res"></i></h1>
+    <br/>
+    <br/>
+    <button onclick="call()" style="width: 20%;height:50px;">CALL</button>  
+
+
+    <!-- <input type="number" name="first" id="first" step="any"/>
     <select id="ope">
         <option value="+">+</option>
         <option value="-">-</option>
@@ -16,39 +23,11 @@
     <input type="number" name="second" id="second" step="any"/>
     <br/>
     <button onclick="cal()">Calculate</button>
-    <input type="text" name="" id="res" readonly=""/>
-    
+    <input type="text" name="" id="res" readonly=""/> -->
     <script type="text/javascript">
-        function cal(){
-            let num1 = document.getElementById("first").value;
-            num1 = Number.parseInt(num1);
-            let op = document.getElementById('ope').value;
-            let num2 = document.getElementById('second').value;
-            num2 = Number.parseInt(num2);
-            
-            let text;
-            switch (op) {
-            case "+":
-                text = num1+num2;
-                break;
-
-            case "-":
-                text = num1 - num2;
-                break;
-
-            case "*":
-            text = num1 * num2;
-            break;
-
-            case "/":
-                if(num2==0){
-                    alert('cant divide by zero')
-                    break
-                }
-                text = num1 / num2;
-                break;
-            }   
-            document.getElementById('res').value = text;
+        function call(){
+            let name =  prompt("enter your name","");
+            document.getElementById('res').innerHTML = name;
         }
         </script>
 </body>
