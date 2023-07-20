@@ -24,6 +24,7 @@ let invitation = name => `welcome to the event ${name}`
 let invitation2 = name => {
     return `redrichards ${name}`
 }
+
 let stat = invitation('dj');
 let stat2 = invitation2('man');
 
@@ -56,3 +57,13 @@ let compliment = function(msg){
 
 // alert(compliment('mrt')('gtr'));
 
+
+function greeting(name)
+{
+    console.log(`welcome ${name}`);
+    // alert('wwe');
+}
+
+// setTimeout(greeting,5000,"jhon"); // itne delay ke baad chize aayenge
+
+// setInterval(greeting,1000,'jhon');
