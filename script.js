@@ -75,7 +75,7 @@ let car = {
     company:"volvo"
 }
 
-console.log(car);
+// console.log(car);
 
 // accessing values
 
@@ -84,11 +84,11 @@ console.log(car);
 
 let proprty_name = 'company';
 
-console.log(car[proprty_name]);
-// console.log(car.proprty_name);  this will not work dot will search for objects defined property
+// console.log(car[proprty_name]);
+// // console.log(car.proprty_name);  this will not work dot will search for objects defined property
 
 car.company = "tata";
-console.log(car[proprty_name]);
+// console.log(car[proprty_name]);
 
 // deleting properties of objects
 
@@ -97,12 +97,41 @@ let obj1 = {
     prop2:"value2"
 }
 
-console.log(obj1);
-delete obj1.prop1
-console.log(obj1);
+// console.log(obj1);
+// delete obj1.prop1
+// console.log(obj1);
 
 let person = {
-    ageCalculate: function(birthyear){
-        
+    ageCalculate: function(birthyear=2003){
+        let age = 2023 - birthyear;
+        return age;
     }
 }
+
+// console.log(`current age of person is ${person.ageCalculate(15)}`);
+
+let person1 = {
+    name : "dj",
+    city: "Jamshedpur",
+    proffesion: "rick climbing",
+    get_summary :function(){
+        // return `${this.name} lives in ${this.city} and does ${this.proffesion}`
+        
+        // return this; // full description
+    }
+}
+
+// console.log(person1.get_summary());
+
+let dishes = ["ad","fh","kl","by"];
+
+for(let i = 0;i<dishes.length;i++){
+    console.log(dishes[i]);
+}
+
+console.log('***************************');
+
+dishes.forEach(function(item,index,array){
+    array[index] = item+" "+index;
+    console.log(array[index]);
+})
