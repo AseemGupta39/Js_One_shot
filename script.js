@@ -1,3 +1,5 @@
+"use strict"
+
 // document.write('len to the sum')
 
 // function f_n(a)
@@ -149,6 +151,69 @@ let min_Plane = {
     airplane:"fl india",
     bookings:[],
     book:function(flightnum,name){
-        
+        console.log(`${name} booked flight on ${flightnum}`);
+        this.bookings.push({flightnum:`${flightnum}`,name:`${name}`});      
     }
 } 
+
+// min_Plane.book(195,"her");
+// min_Plane.book(169,"him");
+
+// console.log(min_Plane);
+
+
+let child_plane = {
+    airplane:"Child Plane",
+    iatacode :"cp",
+    bookings:[]
+}
+
+let book = min_Plane.book;
+
+// book.call(child_plane,225,"fefwef");
+// console.log(child_plane);
+
+// book.call(min_Plane,69,"r5gre");
+
+//  call method can also be implemented by apply method like this
+// book.apply(min_Plane,[89,"terghwer"]);
+// console.log(min_Plane);
+
+
+
+
+//  using bind //
+
+// function greet(){
+//     console.log(`welcome ${this.first} and ${this.last}`);
+// }
+
+// let user ={ 
+//     first:"few",
+//     last:"dew"
+// }
+
+// let g = greet.bind(user);
+// g();
+
+//  used bind //
+
+
+let arr = [1,2,3]
+let ref = arr; // same memory location affects original array
+
+let indi_ref = [...arr]; // diff mem loca dose not affect original
+
+// console.log(arr,ref,indi_ref);
+
+ref[0] = 14; 
+indi_ref[0] = 41;
+
+// console.log('after diff');
+// console.log(arr,ref,indi_ref);
+
+console.log(car);
+
+for(let key in car){
+    console.log(`${key} = ${car[key]}`);
+}
