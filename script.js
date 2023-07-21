@@ -115,7 +115,7 @@ let person1 = {
     city: "Jamshedpur",
     proffesion: "rick climbing",
     get_summary :function(){
-        // return `${this.name} lives in ${this.city} and does ${this.proffesion}`
+        return `${this.name} lives in ${this.city} and does ${this.proffesion}`
         
         // return this; // full description
     }
@@ -126,12 +126,29 @@ let person1 = {
 let dishes = ["ad","fh","kl","by"];
 
 for(let i = 0;i<dishes.length;i++){
-    console.log(dishes[i]);
+    // console.log(dishes[i]);
 }
 
-console.log('***************************');
+// console.log('***************************');
 
 dishes.forEach(function(item,index,array){
     array[index] = item+" "+index;
-    console.log(array[index]);
+    // console.log(array[index]);
 })
+
+
+let blocklist = [{username:"jhon",reason:"abusive content"},{username: "paul",reason:"copyright claim"}];
+
+let n = blocklist.length;
+
+// for(let i=0;i<n;i++){
+//     console.log(`user blocked ${blocklist[i].username} due to ${blocklist[i].reason}`);
+// }
+
+let min_Plane = {
+    airplane:"fl india",
+    bookings:[],
+    book:function(flightnum,name){
+        
+    }
+} 
