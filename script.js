@@ -251,26 +251,43 @@ let content = document.querySelector('.content');
 
 // content.innerHTML += "<h2>hello bachoos</h2>"; 
 
-let link = document.querySelector('a');
-
-console.log(link.getAttribute('href'));
-
-link.setAttribute('href',"www.koogle.com")
-
-console.log(link.getAttribute('href'));
-
-link.innerText="google ka compititor";
 
 
-heading.style.color="hotpink";
-heading.style.backgroundColor="aqua";
+// let link = document.querySelector('a');
 
-heading.classList.add('newClass');
-heading.classList.add('BIGClass');
-console.log(heading.className);
-heading.classList.remove('BIGClass')
-console.log(heading.className);
-heading.classList.replace('newClass',"Class1");
-console.log(heading.className);
+// console.log(link.getAttribute('href'));
+
+// link.setAttribute('href',"www.koogle.com")
+
+// console.log(link.getAttribute('href'));
+
+// link.innerText="google ka compititor";
 
 
+// heading.style.color="hotpink";
+// heading.style.backgroundColor="aqua";
+
+// heading.classList.add('newClass');
+// heading.classList.add('BIGClass');
+
+// console.log(heading.className);
+
+// heading.classList.remove('BIGClass')
+// console.log(heading.className);
+
+// heading.classList.replace('newClass',"Class1");
+// console.log(heading.className);
+
+let parent_con = document.querySelector(".content");
+console.log(Array.from(parent_con.children));
+
+Array.from(parent_con.children).forEach(function(element){
+    // console.log(element);
+    element.classList.add('coders');
+})
+
+let child_ele = document.querySelector('h2');
+// console.log(child_ele.parentElement);
+
+console.log(child_ele.nextElementSibling);
+console.log(child_ele.previousElementSibling);
