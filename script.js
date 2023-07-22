@@ -212,12 +212,65 @@ indi_ref[0] = 41;
 // console.log('after diff');
 // console.log(arr,ref,indi_ref);
 
-console.log(car);
+// console.log(car);
 let x = "";
 for(let key in car){
     // console.log(`${key} = ${car[key]}`);
     x+=car[key];
 }
-console.log(x);
+// console.log(x);
 delete car.color;
 // console.log(car.color);  // deleting object property
+
+
+// console.log(document);
+
+let query_sel_ele = document.querySelectorAll("p"); //
+// console.log(query_sel_ele);
+
+let tag_name_ele = document.getElementsByTagName("p");
+// console.log(tag_name_ele);
+
+
+let class_name_ele = document.getElementsByClassName('hech3');
+// console.log(class_name_ele);
+
+
+let heading = document.querySelector('h1');
+// console.log(heading.innerHTML); // does not ignore spaces 
+// console.log(heading.innerText); // does ignore spaces 
+
+
+let content = document.querySelector('.content');
+ 
+// console.log(content.innerHTML); // does not ignore spaces 
+// console.log(content.innerText); // does ignore spaces 
+
+
+// content.innerText += "<h2>hello bachoo</h2>";
+
+// content.innerHTML += "<h2>hello bachoos</h2>"; 
+
+let link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+
+link.setAttribute('href',"www.koogle.com")
+
+console.log(link.getAttribute('href'));
+
+link.innerText="google ka compititor";
+
+
+heading.style.color="hotpink";
+heading.style.backgroundColor="aqua";
+
+heading.classList.add('newClass');
+heading.classList.add('BIGClass');
+console.log(heading.className);
+heading.classList.remove('BIGClass')
+console.log(heading.className);
+heading.classList.replace('newClass',"Class1");
+console.log(heading.className);
+
+

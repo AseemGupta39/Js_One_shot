@@ -1,6 +1,9 @@
 body{
     background-color: rgb(4, 9, 32);
 }
-h1{
+*{
     color:rgb(6, 184, 238);
+}
+a{
+    text-decoration: none;
 }
