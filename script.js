@@ -213,7 +213,11 @@ indi_ref[0] = 41;
 // console.log(arr,ref,indi_ref);
 
 console.log(car);
-
+let x = "";
 for(let key in car){
-    console.log(`${key} = ${car[key]}`);
+    // console.log(`${key} = ${car[key]}`);
+    x+=car[key];
 }
+console.log(x);
+delete car.color;
+// console.log(car.color);  // deleting object property
