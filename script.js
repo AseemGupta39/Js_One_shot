@@ -292,18 +292,24 @@ let child_ele = document.querySelector('h2');
 // console.log(child_ele.nextElementSibling);
 // console.log(child_ele.previousElementSibling);
 
-let event_element = document.querySelector('.clickme');
-console.log(event_element);
 
-event_element.addEventListener('click',function(){
-    // console.log('clicked me');
-    let li = document.createElement('li');
-    li.textContent = "something new added";
-    ul.append(li);         
 
-})
+// let event_element = document.querySelector('.clickme');
+// console.log(event_element);
 
-console.log(document);
+// event_element.addEventListener('click',function(){
+//     // console.log('clicked me');
+//     let li = document.createElement('li');
+//     li.textContent = "something new added";
+//     ul.append(li);         
+
+// })
+
+// console.log(document);
+
+
+
+
 
 // let elements = document.querySelectorAll('li');
 // // console.log(elements);
@@ -319,11 +325,36 @@ console.log(document);
 
 // })
 
-const ul = document.querySelector('ul');
-ul.addEventListener('click',function(e){
-    // console.log(e.target);
-    if(e.target.nodeName == "LI"){
-        e.target.remove();
+// const ul = document.querySelector('ul');
+// ul.addEventListener('click',function(e){
+//     // console.log(e.target);
+//     if(e.target.nodeName == "LI"){
+//         e.target.remove();
+//     }
+// })
+
+let form = document.querySelector('.sign-up-form')
+let email = document.querySelector('#email');
+let pass = document.querySelector('#password');
+let password_pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}"
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    console.log(form.userEmail.value,form.userPassword.value); //by name
+
+    // console.log(form.email.value,form.password.value); //by id
+    // console.log(`${email.value} ${pass.value}`);
+
+    //  can be done by both the ways
+
+    let password_value = pass.value;
+    let result = password_pattern.match(password_pattern);
+    if(result){
+        console.log('your pass is strong')
+    }
+    else{
+        console.log("weak pass");
     }
 })
+
 

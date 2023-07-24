@@ -7,3 +7,7 @@ body{
 a{
     text-decoration: none;
 }
+#heading{
+    text-align: center;
+    font-size: 50px;
+}
