@@ -279,15 +279,51 @@ let content = document.querySelector('.content');
 // console.log(heading.className);
 
 let parent_con = document.querySelector(".content");
-console.log(Array.from(parent_con.children));
+// console.log(Array.from(parent_con.children));
 
-Array.from(parent_con.children).forEach(function(element){
-    // console.log(element);
-    element.classList.add('coders');
-})
+// Array.from(parent_con.children).forEach(function(element){
+//     // console.log(element);
+//     element.classList.add('coders');
+// })
 
 let child_ele = document.querySelector('h2');
 // console.log(child_ele.parentElement);
 
-console.log(child_ele.nextElementSibling);
-console.log(child_ele.previousElementSibling);
+// console.log(child_ele.nextElementSibling);
+// console.log(child_ele.previousElementSibling);
+
+let event_element = document.querySelector('.clickme');
+console.log(event_element);
+
+event_element.addEventListener('click',function(){
+    // console.log('clicked me');
+    let li = document.createElement('li');
+    li.textContent = "something new added";
+    ul.append(li);         
+
+})
+
+console.log(document);
+
+// let elements = document.querySelectorAll('li');
+// // console.log(elements);
+
+// elements.forEach(function(item){
+//     // console.log(item);
+//     item.addEventListener('click',function(e){
+//         console.log(`${item.innerText} ${e.target} clicked`);
+//         // item.target.style.border_width = '50px';
+//         // e.target.style.textDecoration = 'line-through';
+//         // e.target.remove();
+//     })
+
+// })
+
+const ul = document.querySelector('ul');
+ul.addEventListener('click',function(e){
+    // console.log(e.target);
+    if(e.target.nodeName == "LI"){
+        e.target.remove();
+    }
+})
+
